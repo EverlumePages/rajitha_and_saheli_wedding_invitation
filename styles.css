@@ -1,0 +1,151 @@
+@font-face{font-family:LocalSinhala;src:local('Iskoola Pota'),local('Noto Serif Sinhala'),local('Nirmala UI');font-display:swap}
+:root{--sage:#98a086;--olive:#3d4939;--ink:#344130;--cream:#f8f6ef;--gold:#9b8050;--muted:#65705e;--line:#d9dccf;--serif:Georgia,'Times New Roman',serif;--sans:'Segoe UI',Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7}button,input,textarea{font:inherit}button,a,input,textarea{ -webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}button{cursor:pointer}[hidden]{display:none!important}:focus-visible{outline:3px solid #8e6c35;outline-offset:5px}.sinhala,[lang=si]{font-family:LocalSinhala,'Noto Serif Sinhala','Nirmala UI',serif}.eyebrow{display:block;text-transform:uppercase;font-size:10px;letter-spacing:3px;font-weight:500}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;background:var(--olive);border:1px solid var(--olive);color:#fff;padding:15px 24px;font-size:12px;letter-spacing:.4px;transition:background .2s}.button:hover{background:#536148}.button:disabled{cursor:not-allowed;background:#e0e3d7;border-color:#d1d6c7;color:#55604c}.text-button{border:0;background:none;color:var(--olive);font-size:11px;padding:12px 4px;letter-spacing:.5px}.section-pad{padding:85px 9%}.section-kicker{display:flex;align-items:center;gap:15px;font-size:9px;letter-spacing:2.5px;color:var(--muted);margin-bottom:40px}.section-kicker>span{font:italic 15px var(--serif);color:var(--gold);letter-spacing:0}.invitation-section{background:#e9ecdf}.invitation-card{max-width:790px;margin:0 auto;text-align:center;padding:60px 90px 130px;background:url('assests/newbg.png') center bottom/cover;border:1px solid #d6dacb;outline:1px solid #c6ccb9;outline-offset:9px}.botanical-mark{font:55px var(--serif);color:#7f8f70;line-height:1;margin-bottom:26px}h2{font:normal clamp(40px,4.4vw,62px)/1.15 var(--serif);letter-spacing:-1.5px;margin:0 0 24px}h2 em{font-weight:normal;color:#748266}.invitation-card h2{white-space:pre-line;font-size:29px;letter-spacing:0;line-height:1.9;margin:28px -25px 18px}.small-rule{width:48px;height:1px;background:#a68e62;margin:25px 0}.invitation-card .small-rule{margin:26px auto}.invitation-si{font-size:20px;line-height:1.9}.invitation-en{font:italic 18px/1.8 var(--serif);color:var(--muted);max-width:440px;margin:25px auto}.signature{display:block;font:italic 27px var(--serif);margin-top:35px;color:#617251}.day-section{padding-top:100px;padding-bottom:105px}.day-grid{display:grid;grid-template-columns:1fr 1fr;gap:10%}.day-heading>.eyebrow{margin-bottom:25px}.date-block{display:flex;gap:22px;align-items:center;border-top:1px solid var(--line);margin-top:35px;padding-top:20px}.date-block strong{font:80px var(--serif);color:#78876a}.date-block span{font-size:11px;letter-spacing:2px}.date-block p{margin:5px 0;font-size:12px;color:var(--muted)}.timezone{font-size:10px;color:var(--muted);margin-top:18px}.timeline{padding:0;margin:0;list-style:none}.timeline li{position:relative;padding:0 0 30px 32px;border-left:1px solid #ccd2c0}.timeline li:last-child{padding-bottom:0;border-color:transparent}.timeline li:before{content:'';position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 5px var(--cream)}.timeline time{font-size:10px;letter-spacing:2px;color:#7b6946}.timeline h3{font:25px var(--serif);margin:7px 0}.timeline .sinhala{font-size:18px;margin:4px 0}.timeline .note{font-size:12px;color:var(--muted);margin:6px 0;max-width:270px}.venue-section{display:grid;grid-template-columns:1fr 1fr;background:#e4e8dc}.venue-art{min-height:580px;background:url('assests/card2.jpg') center 48%/cover}.venue-copy{padding:65px 14%}.venue-copy .eyebrow{font-size:9px;letter-spacing:2px;margin-bottom:25px}.venue-copy h2{font-size:49px}.venue-si{font-size:20px}.venue-location{font-size:12px;max-width:250px}.venue-copy>p:not(.eyebrow):not(.sinhala):not(.venue-location):not(.venue-note){font:italic 20px/1.6 var(--serif);color:#65765b}.venue-note{border-top:1px solid #c6cfbd;padding-top:18px;font-size:10px;color:#5e6d53;margin-top:30px}.rsvp-section{display:grid;grid-template-columns:1fr 1fr;gap:9%;padding-top:105px;padding-bottom:100px}.rsvp-copy{position:relative}.rsvp-copy h3{font-weight:normal;font-size:23px;margin:25px 0 8px}.rsvp-copy>p.sinhala{font-size:18px;max-width:330px}.reply-by{font-size:12px;margin-top:26px}.reply-by strong{font-weight:500;border-bottom:1px solid #a89b79}.rsvp-flower{width:190px;mix-blend-mode:multiply;margin-top:20px;opacity:.8}.rsvp-form{background:#fffdf7;border:1px solid #d9ddcf;padding:35px}.form-intro{font:italic 21px var(--serif);margin:0 0 28px}.rsvp-form>label,#party-field>label{display:block;font-size:11px;margin:18px 0 8px}.rsvp-form label span,.rsvp-form legend span{color:#69755e}.rsvp-form input:not([type=radio]),textarea{width:100%;border:1px solid #ccd2c1;border-radius:0;background:#fffef9;padding:11px 12px;color:var(--ink);font-size:13px}.rsvp-form input[type=number]{max-width:100px}textarea{resize:vertical;min-height:90px}fieldset{border:0;margin:22px 0;padding:0}legend{font-size:11px;margin-bottom:10px}.attendance-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}.attendance-options label{border:1px solid #d2d7c8;padding:12px 9px;display:flex;align-items:start;gap:7px;cursor:pointer;font-size:10px}.attendance-options label:has(:checked){border-color:#748465;background:#edf0e5}.attendance-options input{accent-color:#58694c;margin:4px 0 0}.attendance-options small{display:block;font-size:12px;margin-top:4px;font-family:LocalSinhala,serif}.rsvp-status{font-size:11px;line-height:1.7;padding:12px 14px;background:#edf0e5;border-left:2px solid #91a17e}.rsvp-form .button{width:100%;margin-top:5px}.form-footnote{font-size:10px;color:var(--muted);text-align:center;margin:13px 0 0}.closing{text-align:center;background:#dce2d1;padding:70px 20px}.closing>.sinhala{font-size:21px;margin:24px 0}.closing-names{font:48px var(--serif);margin:20px 0}.closing-names em{font-size:35px;color:#8d7850}.closing-date{font-size:10px;letter-spacing:3px;text-transform:uppercase}footer{display:flex;justify-content:space-between;gap:20px;padding:24px 6%;font-size:9px;color:var(--muted)}.intro{position:fixed;inset:0;z-index:10;background:#e8ebdf;display:flex;align-items:center;justify-content:center}.intro-surround{display:flex;flex-direction:column;align-items:center;gap:16px;padding:15px}.intro-surround>.eyebrow{font-size:9px}.video-frame{position:relative;height:min(78dvh,800px);aspect-ratio:9/16;max-width:90vw;background:#eef0e4;box-shadow:0 20px 70px #35432d25}.video-frame video{width:100%;height:100%;object-fit:contain;display:block}.play-intro{position:absolute;bottom:10%;left:50%;transform:translateX(-50%);white-space:nowrap}.intro-open{overflow:hidden}.noscript{position:fixed;bottom:0;left:0;right:0;background:#fff;padding:20px;text-align:center}
+@media(min-width:1500px){main,.site-header,footer{max-width:1500px;margin-left:auto;margin-right:auto}}
+@media(max-width:760px){.section-pad{padding:65px 7%}.section-kicker{margin-bottom:30px;font-size:8px}.invitation-card{padding:40px 24px 80px;outline-offset:5px}.invitation-card h2{font-size:23px;line-height:1.9;margin:24px 0}.invitation-si{font-size:18px}.invitation-en{font-size:16px}.invitation-card .eyebrow{font-size:8px;letter-spacing:2px}.day-grid{grid-template-columns:1fr;gap:40px}h2{font-size:47px}.date-block{max-width:320px}.timeline{margin-left:5px}.venue-section{grid-template-columns:1fr}.venue-art{min-height:300px;background-position:center 42%}.venue-copy{padding:42px 8% 50px}.venue-copy h2{font-size:44px}.rsvp-section{grid-template-columns:1fr;gap:25px}.rsvp-flower{position:absolute;width:110px;right:0;bottom:0;opacity:.35;z-index:-1}.rsvp-form{padding:25px 20px}.rsvp-copy .section-kicker{font-size:8px;letter-spacing:1.6px}.rsvp-copy>p.sinhala{max-width:300px}.closing-names{font-size:37px}.closing{padding:55px 20px}footer{flex-direction:column;align-items:center;gap:6px;text-align:center}.intro-surround>.eyebrow{letter-spacing:1.6px;font-size:8px}.attendance-options{gap:6px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Static floral card in the artwork's original colors. */
+.invitation-card{position:relative;isolation:isolate;overflow:hidden;max-width:680px;padding-bottom:80px;border-radius:24px}.invitation-card .invitation-en,.invitation-card .signature{color:var(--ink)}
+@media(max-width:760px){.invitation-card{padding-bottom:60px;border-radius:16px}}
+
+/* Gentle, full-page floral fall. Multiply blends the supplied JPEG's white paper away. */
+.falling-flowers{position:fixed;inset:0;z-index:8;overflow:hidden;pointer-events:none;user-select:none;mix-blend-mode:multiply}
+.falling-flower{position:absolute;top:-70px;left:var(--left);width:var(--size);height:var(--size);opacity:0;animation:flower-fall var(--duration) linear var(--delay) infinite;will-change:transform}
+.falling-flower img{display:block;width:100%;height:100%;object-fit:contain;animation:flower-sway 5s ease-in-out var(--delay) infinite alternate}
+@keyframes flower-fall{0%{transform:translate3d(0,0,0) rotate(0);opacity:0}8%{opacity:.48}85%{opacity:.48}100%{transform:translate3d(var(--drift),calc(100dvh + 140px),0) rotate(var(--turn));opacity:0}}
+@keyframes flower-sway{from{transform:translateX(-9px) rotate(-12deg)}to{transform:translateX(9px) rotate(12deg)}}
+.falling-flowers.is-paused .falling-flower,.falling-flowers.is-paused img{animation-play-state:paused}
+@media(max-width:760px){.falling-flower:nth-child(even){display:none}.falling-flower{width:calc(var(--size)*.8);height:calc(var(--size)*.8)}}
+@media(prefers-reduced-motion:reduce){.falling-flowers{display:none}}
+
+/* ---------- Top bar ---------- */
+:root{--display:'Cormorant Garamond',Georgia,serif;--script:'Playfair Display',Georgia,serif;--gold-2:#b8913f;--leaf:#2f4a26}
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:14px;height:84px;padding:0 6%;background:#fbfaf5;border-bottom:1px solid #ebe7d8}
+.monogram{font:600 36px/1 var(--display);color:var(--leaf);white-space:nowrap}
+.monogram span{font:italic 500 27px var(--script);color:var(--gold-2);margin:0 4px}
+.header-sep{flex:none;width:1px;height:34px;background:#dccfae}
+.header-date{font:600 15px var(--display);font-variant-numeric:lining-nums;text-transform:uppercase;letter-spacing:4px;color:#3a4a33;white-space:nowrap}
+.nav-rsvp{display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--display);letter-spacing:1.5px;color:var(--leaf);border:1.5px solid #4c6640;border-radius:999px;padding:9px 20px;white-space:nowrap;transition:background .2s,color .2s}
+.nav-rsvp:hover{background:#4c6640;color:#fff}
+.nav-rsvp svg{width:12px;height:12px}
+@media(max-width:760px){.site-header{height:62px;padding:0 16px;gap:8px}.monogram{font-size:27px}.monogram span{font-size:20px;margin:0 2px}.header-sep{height:26px}.header-date{font-size:11.5px;letter-spacing:2px}.nav-rsvp{font-size:12px;padding:6px 13px;gap:6px}.nav-rsvp svg{width:10px;height:10px}}
+@media(max-width:360px){.header-sep{display:none}.header-date{letter-spacing:1.2px}}
+
+/* ---------- Opening section: arch, names beside the couple, pill button ----------
+   The composition is sized in container units (cqw) so it scales as one piece; 100cqw = its width. */
+.hero{position:relative;overflow:hidden;container-type:inline-size;background:radial-gradient(ellipse 70% 55% at 50% 42%,#fffefa 0%,#fffefa00 70%),radial-gradient(circle at 0 100%,#d9e2cc 0,#d9e2cc00 45%),radial-gradient(circle at 100% 0,#dde5d1 0,#dde5d100 40%),#f5f3e9}
+.hero-art{position:absolute;inset:0;background:url('assests/card2.jpg') center/cover;opacity:.12;mix-blend-mode:multiply;pointer-events:none}
+.hero-inner{position:relative;z-index:1;container-type:inline-size;width:min(100%,max(340px,min(600px,calc((100svh - 84px)*.6))));margin:0 auto;text-align:center}
+.hero-sprig{position:absolute;pointer-events:none;user-select:none}
+.hero-sprig--tl{top:-4cqw;left:-10cqw;width:34cqw;transform:scaleX(-1);opacity:.35}
+.hero-sprig--tr{top:-6cqw;right:-4cqw;width:46cqw;transform-origin:100% 0;transform:rotate(-38deg) translate(-2cqw,-4cqw)}
+.hero-sprig--bl{top:94cqw;left:-7cqw;width:44cqw;transform:rotate(180deg)}
+.hero-sprig--br{bottom:-5cqw;right:-6cqw;width:36cqw;transform:scaleY(-1)}
+@media(min-width:761px){
+  .site-header{display:grid;grid-template-columns:1fr auto auto auto 1fr;column-gap:32px}
+  .monogram{justify-self:start}.nav-rsvp{justify-self:end}
+  .hero-sprig--tl{top:-40px;left:-30px;width:340px;opacity:.55}
+  .hero-sprig--tr{top:-60px;right:-20px;width:400px}
+  .hero-sprig--bl{top:auto;bottom:30px;left:-40px;width:380px}
+  .hero-sprig--br{bottom:-40px;right:-40px;width:340px}
+}
+.hero-arch{position:absolute;left:4.5cqw;right:4.5cqw;top:6cqw;height:112cqw;border:1.5px solid #cfb47a;border-bottom:0;border-radius:45.5cqw 45.5cqw 0 0/34cqw 34cqw 0 0;background:linear-gradient(#fffef9cc,#fffef900 75%);-webkit-mask-image:linear-gradient(#000 60%,transparent 97%);mask-image:linear-gradient(#000 60%,transparent 97%);pointer-events:none}
+.hero .ornament{position:relative;display:flex;align-items:center;justify-content:center;gap:2.2cqw;color:#bf9a4c}
+.hero .ornament::before,.hero .ornament::after{content:'';height:1px;width:14cqw;background:linear-gradient(90deg,#c9a85f00,#c9a85f)}
+.hero .ornament::after{background:linear-gradient(90deg,#c9a85f,#c9a85f00)}
+.hero .ornament svg{flex:none;height:3.4cqw;width:auto;overflow:visible}
+.ornament--top{margin-top:14cqw}
+.hero .ornament--rings{margin-top:1.4cqw}
+.hero .ornament--rings svg{height:2.8cqw}
+.hero .ornament--rings::before,.hero .ornament--rings::after,.hero .ornament--small::before,.hero .ornament--small::after{width:9cqw}
+.hero .ornament--small svg{height:2.6cqw}
+.ornament--bottom{margin-top:5cqw;padding-bottom:11cqw}
+.hero-eyebrow{position:relative;margin:4.6cqw 0 0;font:600 2.45cqw/1.2 var(--display);letter-spacing:.42cqw;text-transform:uppercase;color:#4a5a42}
+.hero .welcome{position:relative;margin:2.4cqw 0 0;font-size:4.3cqw;line-height:1.4;color:#3f4d38}
+.hero-stage{position:relative;height:88cqw;margin-top:-2.2cqw}
+.hero-couple{position:absolute;top:0;left:42.5cqw;width:54cqw;height:auto;pointer-events:none;filter:drop-shadow(0 1.5cqw 1.6cqw #4a5a3a1f)}
+.hero-names{position:absolute;left:4cqw;top:4cqw;width:46cqw}
+.hero h1{position:relative;margin:0;font:italic 500 11.4cqw/1.26 var(--script);letter-spacing:-.02em}
+.hero h1 span{display:block;background:linear-gradient(180deg,#27441e 15%,#5d7b3e 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .name-2{padding-left:2cqw}
+.hero h1 em{position:absolute;left:40cqw;top:9cqw;font:italic 500 12cqw/1 var(--script);background:linear-gradient(170deg,#e4c57e,#b28a3c 60%,#8d6a2b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-flourish{display:block;width:26cqw;height:auto;margin:0 auto;color:#c4a052}
+.hero-date{margin:4cqw 0 0;font:600 3.9cqw/1 var(--display);letter-spacing:.5cqw;font-variant-numeric:lining-nums;color:#33452c}
+.hero .ornament--small{margin-top:2.4cqw}
+.hero-place{margin:2.2cqw 0 0;font:600 2.35cqw/1.2 var(--display);letter-spacing:.38cqw;text-transform:uppercase;color:#3f4d38}
+.hero-button{position:relative;display:flex;align-items:center;justify-content:center;gap:5cqw;width:67cqw;height:12.6cqw;margin:7.6cqw auto 0;border-radius:999px;border:.45cqw solid #d6b76c;background:linear-gradient(180deg,#5d7b46,#3e5a2f 70%,#38512a);color:#fbf8ee;font:600 4.6cqw/1 var(--display);letter-spacing:.06em;box-shadow:0 1.6cqw 3.2cqw -1cqw #2f45224d,inset 0 .3cqw 0 #ffffff33;transition:filter .2s,transform .2s}
+.hero-button:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.hero-button svg{width:5cqw;height:auto}
+
+/* Centered "Save the date" heading and date block. */
+.day-heading{text-align:center}
+.day-heading .date-block{justify-content:center;max-width:420px;margin-inline:auto}
+.day-heading .date-block div{text-align:left}
+
+/* Centered venue details. */
+.venue-copy{text-align:center}
+.venue-copy .section-kicker{justify-content:center}
+.venue-copy .small-rule,.venue-copy .venue-location{margin-inline:auto}
+/* Green flower tucked into the bottom-left corner, partly off the edges (about 75% shows). Multiply blends its white background into the sage. */
+.venue-copy{position:relative;overflow:hidden}
+.venue-copy>*{position:relative}
+.venue-copy::before{content:'';position:absolute;left:-24px;bottom:-24px;width:150px;aspect-ratio:1199/1265;background:url('assests/flower.jpg') center/contain no-repeat;mix-blend-mode:multiply;pointer-events:none}
+@media(min-width:761px){.venue-copy::before{left:-34px;bottom:-34px;width:210px}}
+
+/* Full-screen opening film: fills the screen on phones; on landscape screens it fills the full height. */
+.intro-surround{padding:0;width:100%;height:100%}
+.video-frame{width:100%;height:100dvh;max-width:none;aspect-ratio:auto;box-shadow:none}
+.video-frame video{object-fit:cover}
+@media(min-aspect-ratio:3/4){.video-frame video{object-fit:contain}}
+
+/* Invitation card on the green floral background (assests/newbg.png): cream text, kept clear of the flowers along the bottom. */
+.invitation-card{background:#5f7a52 url('assests/newbg.png') center bottom/cover;padding-bottom:210px;color:#fbf6e9;text-shadow:0 1px 3px #1f2b1a59}
+.invitation-card .eyebrow,.invitation-card .invitation-en,.invitation-card .signature{color:#fbf6e9}
+.invitation-card .small-rule{background:#e6d29f}
+@media(min-width:761px){.invitation-card{max-width:560px;padding-inline:100px;padding-bottom:320px}}
+
+/* Centered RSVP intro. */
+.rsvp-copy{text-align:center}
+.rsvp-copy .section-kicker{justify-content:center}
+.rsvp-copy>p.sinhala{margin-inline:auto}
+
+/* Pearl flower (assests/single-flower-cutout.png) peeking into the closing section's top-left corner
+   and the footer's bottom-right corner. Each box shows only part of the flower; the rest is cropped off. */
+.closing{position:relative;overflow:hidden}
+.closing>*{position:relative}
+.closing::before{content:'';position:absolute;top:0;left:0;width:88px;height:104px;background:url('assests/single-flower-cutout.png') right bottom/116px auto no-repeat;pointer-events:none}
+footer{position:relative}
+footer>*{position:relative;z-index:1}
+footer::after{content:'';position:absolute;right:0;bottom:0;width:92px;height:132px;background:url('assests/single-flower-cutout.png') left top/124px auto no-repeat;pointer-events:none}
+@media(min-width:761px){.closing::before{width:140px;height:165px;background-size:184px auto}footer{padding-right:calc(6% + 150px)}footer::after{width:140px;height:196px;background-size:186px auto}}
+
+/* Floral painting behind the closing section, softened with a cream wash so the text stays readable. */
+.closing{background:linear-gradient(#f4f1e6b8,#f4f1e6b8),url('assests/card2.jpg') center 45%/cover #dce2d1}
+
+/* ---------- Entrance and scroll animations (scroll-reveal.js) ----------
+   Only active when the script adds .reveal-on to <html>, which it skips for "reduce motion".
+   Uses the separate translate/scale properties so existing transforms (e.g. the rotated corner sprigs) are kept. */
+#page{overflow-x:clip}
+.reveal-on [data-reveal].is-visible{--ease:cubic-bezier(.2,.7,.2,1);transition:opacity .9s ease var(--reveal-delay,0s),translate 1s var(--ease) var(--reveal-delay,0s),scale 1s var(--ease) var(--reveal-delay,0s),clip-path 1.3s cubic-bezier(.65,0,.35,1) var(--reveal-delay,0s)}
+.reveal-on [data-reveal]:not(.is-visible){opacity:0}
+.reveal-on [data-reveal=up]:not(.is-visible){translate:0 28px}
+.reveal-on [data-reveal=down]:not(.is-visible){translate:0 -14px}
+.reveal-on [data-reveal=left]:not(.is-visible){translate:-40px 0}
+.reveal-on [data-reveal=right]:not(.is-visible){translate:40px 0}
+.reveal-on [data-reveal=zoom]:not(.is-visible){scale:.9}
+.reveal-on [data-reveal=bloom]:not(.is-visible){scale:.75}
+.reveal-on [data-reveal=rise]:not(.is-visible){translate:0 60px}
+.reveal-on [data-reveal=rise].is-visible{transition-duration:1.2s,1.5s}
+.reveal-on [data-reveal=pop].is-visible{transition:opacity .5s ease var(--reveal-delay,0s),scale .8s cubic-bezier(.34,1.7,.5,1) var(--reveal-delay,0s)}
+.reveal-on [data-reveal=pop]:not(.is-visible){scale:.3}
+.reveal-on [data-reveal=line]:not(.is-visible){scale:0 1}
+.reveal-on [data-reveal=curtain]:not(.is-visible){opacity:1;clip-path:inset(0 0 100% 0)}
+.reveal-on [data-reveal=draw]:not(.is-visible){opacity:1}
+.reveal-on [data-reveal=draw] path{stroke-dasharray:1;stroke-dashoffset:1}
+.reveal-on [data-reveal=draw].is-visible path{stroke-dashoffset:0;transition:stroke-dashoffset 1.6s ease-in-out var(--reveal-delay,0s)}
+/* After they bloom in, the corner sprigs sway gently. */
+@keyframes sprig-sway{from{rotate:-1.6deg}to{rotate:1.6deg}}
+.reveal-on .hero-sprig.is-visible{animation:sprig-sway 7s ease-in-out 1.5s infinite alternate}
+.reveal-on .hero-sprig--tr.is-visible{animation-delay:2.4s}
+.reveal-on .hero-sprig--bl.is-visible{animation-duration:8s}
+

@@ -1,0 +1,30 @@
+<!doctype html><html lang="si"><head><meta charset="utf-8"><link rel="stylesheet" href="styles.css"><style>
+html,body{margin:0;width:720px;height:1280px;overflow:hidden;background:#e4dccb}#card{position:relative;width:720px;height:1280px;color:#756444;text-align:center}canvas{position:absolute;inset:0;width:720px;height:1280px}.copy{position:absolute;left:155px;width:410px;font-family:LocalSinhala,'Nirmala UI',serif;line-height:1.6}.welcome-copy{top:288px;font-size:30px;line-height:1.8}.couple{top:455px;left:115px;width:490px;font-size:96px;line-height:1.25;color:#8b754b}.couple .and{font-size:36px;margin:14px 0}.date-copy{top:910px;font-size:35px}.date-copy .en{font-size:28px;letter-spacing:2px;margin-top:8px}.en{font-family:Georgia,serif}#output{display:none}body.rendering #card{display:none}body.rendering #output{display:block}video{display:none}
+</style></head><body><div id="card"><canvas id="plate" width="720" height="1280"></canvas><div class="copy welcome-copy" id="welcome"></div><div class="copy couple"><div id="first-si"></div><div class="and">සහ</div><div id="second-si"></div></div><div class="copy date-copy"><div id="date-si"></div><div class="en" id="date-en"></div></div></div><canvas id="output" width="720" height="1280"></canvas><video id="source" src="assests/opening.mp4" muted preload="auto" playsinline></video><script type="module">
+import {invitation as c} from './invitation.config.js';
+const names=c.names.sinhala.split(' සහ ');
+const text={welcome:'අපගේ විවාහ මංගල්‍යයට\nආදරයෙන් ඇරයුම් කරමු','first-si':names[0],'second-si':names[1],'date-si':c.date.sinhala,'date-en':c.date.english};
+for(const [id,value]of Object.entries(text)){document.getElementById(id).textContent=value;}
+document.querySelector('#welcome').style.whiteSpace='pre-line';
+const load=src=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=src;});
+const [original,clean]=await Promise.all([load('media/original-card-reference.png'),load('media/clean-original-card.png')]);
+const W=720,H=1280,plate=document.querySelector('#plate'),ctx=plate.getContext('2d',{willReadFrequently:true});ctx.drawImage(original,0,0,W,H);const originalPixels=ctx.getImageData(0,0,W,H);ctx.drawImage(clean,0,0,W,H);const cleanPixels=ctx.getImageData(0,0,W,H);const merged=new ImageData(new Uint8ClampedArray(originalPixels.data),W,H);
+// Feather the repaired paper into the original artwork, touching only its lettering regions.
+const regions=[[286,31,150,75],[244,280,240,114],[137,438,440,270],[212,718,305,116],[239,878,251,82],[247,965,255,87]];
+const regionMask=new Float32Array(W*H);
+for(const [x,y,w,h]of regions)for(let yy=y;yy<y+h;yy++)for(let xx=x;xx<x+w;xx++){const edge=Math.min(xx-x,x+w-1-xx,yy-y,y+h-1-yy);const alpha=Math.min(1,edge/10);const p=yy*W+xx;regionMask[p]=Math.max(regionMask[p],alpha);for(let ch=0;ch<3;ch++)merged.data[p*4+ch]=originalPixels.data[p*4+ch]*(1-alpha)+cleanPixels.data[p*4+ch]*alpha;}
+ctx.putImageData(merged,0,0);await document.fonts.ready;
+const video=document.querySelector('#source');const seek=t=>new Promise((resolve,reject)=>{if(Math.abs(video.currentTime-t)<.001&&video.readyState>=2){resolve();return;}video.addEventListener('seeked',resolve,{once:true});video.addEventListener('error',reject,{once:true});video.currentTime=t;});
+if(video.readyState<2)await new Promise(resolve=>video.addEventListener('loadeddata',resolve,{once:true}));
+const output=document.querySelector('#output'),out=output.getContext('2d',{willReadFrequently:true});await seek(2);out.drawImage(video,0,0);const closed=out.getImageData(0,0,W,H).data;await seek(9);out.drawImage(video,0,0);const reference=out.getImageData(0,0,W,H).data;let replacement;
+const sealRows=[];for(let y=440;y<780;y++){let left=720,right=-1;for(let x=185;x<515;x++){const p=(y*W+x)*4;if(closed[p]-closed[p+1]>12&&closed[p]-closed[p+2]>45){left=Math.min(left,x);right=Math.max(right,x);}}sealRows[y]=[left-2,right+2];}
+window.prepareRender=async()=>{const img=await load('media/localized-card.jpg');out.drawImage(img,0,0,W,H);replacement=out.getImageData(0,0,W,H).data;document.body.classList.add('rendering');};
+window.renderFrame=async t=>{await seek(t);out.drawImage(video,0,0,W,H);if(t<=2)return;const current=out.getImageData(0,0,W,H),data=current.data;
+ // Measured source motion: panels separate at 2s, sliding 104px/s left and 98px/s right.
+ const leftShift=-104*(t-2);const leftEdge=372+leftShift,rightEdge=372+98*(t-2);
+ // Include text extents as well as repaired paper; the rest of the original video remains unchanged.
+ const editRegions=[[145,25,430,90],[110,270,500,800]];
+ for(const[x,y,w,h]of editRegions)for(let yy=y;yy<y+h;yy++)for(let xx=x;xx<x+w;xx++){const seal=sealRows[yy];if(xx<=leftEdge||xx>=rightEdge||(t<6&&seal&&xx>=seal[0]+leftShift&&xx<=seal[1]+leftShift))continue;const edge=Math.min(xx-x,x+w-1-xx,yy-y,y+h-1-yy);const alpha=Math.min(1,edge/6);const p=(yy*W+xx)*4;for(let ch=0;ch<3;ch++){const shade=t<6?1-.20*Math.exp(-Math.max(0,xx-leftEdge)/12):1;const shaded=replacement[p+ch]*shade;data[p+ch]=data[p+ch]*(1-alpha)+shaded*alpha;}}
+ out.putImageData(current,0,0);
+};window.sceneReady=true;
+</script></body></html>

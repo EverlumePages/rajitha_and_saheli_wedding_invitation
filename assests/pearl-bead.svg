@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <radialGradient id="pearl" cx="35%" cy="28%" r="75%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".24" stop-color="#fffefb"/>
+      <stop offset=".46" stop-color="#e6eeeb"/>
+      <stop offset=".68" stop-color="#bdcbc7"/>
+      <stop offset=".86" stop-color="#c4c3b9"/>
+      <stop offset="1" stop-color="#f1eee6"/>
+    </radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%">
+      <feDropShadow dx=".5" dy="1.5" stdDeviation=".9" flood-color="#59554a" flood-opacity=".36"/>
+    </filter>
+    <filter id="shine"><feGaussianBlur stdDeviation=".65"/></filter>
+  </defs>
+  <circle cx="10" cy="9" r="8" fill="url(#pearl)" stroke="#f3f1e8" stroke-width=".5" filter="url(#shadow)"/>
+  <ellipse cx="7.7" cy="6" rx="2.7" ry="2.1" fill="white" opacity=".85" filter="url(#shine)"/>
+  <path d="M5.1 13.1 A6.5 6.5 0 0 0 14.5 13.9" fill="none" stroke="#fffaf0" stroke-width=".65" opacity=".65"/>
+</svg>
